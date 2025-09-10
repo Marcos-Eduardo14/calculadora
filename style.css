@@ -1,0 +1,93 @@
+:root {
+  --black: #0d0d0d;
+  --ofwhite: #fafaf0;
+  --blue: #4DA6FF;
+  --cinza: #D9D9D9;
+  --cinza2: #2C2C2C; 
+}
+
+body {
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container-calc {
+    background-color: var(--cinza2);
+    border-radius: 20px;
+    border: 2px solid var(--black);
+    display: grid;
+    grid-template-areas: "visor visor visor visor"
+                        "c ce dividir multiplicar"
+                        "sete oito nove subtrair"
+                        "quatro cinco seis somar"
+                        "um dois tres igual"
+                        "zero zero ponto igual";
+    padding: 10px;
+    width: 380px;
+    height: 500px;
+    gap: 10px;
+    
+    user-select: none;
+
+    transition: 0.5s ease;
+}
+
+.container-calc:hover {
+    padding: 20px;
+}
+
+.visor {
+    background-color: var(--blue);
+    grid-area: visor;
+    border-radius: 10px;
+    border: 2px solid var(--black);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    min-height: 60px;
+    color: var(--black);
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    transition: 0.5s ease;
+}
+
+.visor:hover {
+    padding: 10px;
+}
+
+
+.visor span {
+    padding: 0 10px;    
+}
+
+.button {
+    background-color: var(--blue);
+    border: 2px solid var(--black);
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    font-size: 25px;
+    color: var(--black);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    user-select: none;
+
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--cinza2);
+    color: var(--blue);
+    font-family: Arial, Helvetica, sans-serif;
+    transform: scale(0.9);
+}
